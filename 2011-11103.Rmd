@@ -1,0 +1,21 @@
+---
+title: "Untitled"
+author: "sangilhan"
+date: "2016³â 9¿ù 8ÀÏ"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+constant term is 96.8729, wind¡¯s coefficients is -5.5509. F test value 9.272e-13 Adjusted R-squared: 0.3563 that means the model is useful but can¡¯t fully explain the ozone
+
+```{r cars}
+data <- airquality
+lm1 <- lm(Ozone ~ Wind,data)
+summary(lm1)
+plot(data$Wind,data$Ozone)
+abline(96.8729,-5.5509)
+
+```
